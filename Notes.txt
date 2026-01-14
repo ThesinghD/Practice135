@@ -1,0 +1,76 @@
+Terminal:
+    ls = print all items in current directory
+    cd = moves directory
+    pwd = prints current directory
+    mkdir = makes new directory at current locaiton with provided name
+    touch = creates empty file in current directory with given file name
+
+
+Git:
+    git add = adds named files to the staging area, ready to be committed
+        git add . = adds all files in current directory to staging area
+    git commit -m "message" = commits added files with given description
+    git push = pushes all commited files to github, "saving" them online
+    git status = reports current status of directory (changes, new files, etc)
+    git clone (url) = copies github repo onto computer into current directory
+    git diff = shows specific changes in files
+
+Shortcuts:
+    Ctrl+Shift+M = checks code for style mistakes
+
+Code:
+    try:
+        code
+    except __error_name__: = tries to run the first block of code, and if it encounters the named error, runs the second block of code
+        code
+
+Notation:
+    """
+    Docstring = Long annotation, basically
+    """
+    #Comment = put a hashtag before code to make it a comment that doesn't run
+    -> Optional[type] = Adds the option of the function returning either the provided types or none
+
+Function notation example:
+    """
+    Description of what the function does (ex: gets user's age)
+
+    Parameters
+    =========
+    What arguments the function calls, and what they represent
+        ex: string
+            supplied age as string
+
+
+    Returns
+    =======
+    What the function returns, and what it represents
+        ex: int
+            supplied age as int
+
+    Raises:
+    =======
+    What errors the function could result in, and how that error could be raised
+        ex: Value Error
+            The supplied age was not an integer
+    """
+
+
+Testing:
+    unittest = Important library for testing functions
+    from unittest.mock import patch, Mock = Code to import patch and mock functionality from unittest
+    @patch('builtins.input', side_effect=[__input__]) = hijacks the input function for testing, using provided value as the input
+    def test_functionname_scenario(self, _: Mock) -> None= definition for a test that includes mock
+    self.assertTrue(function_name(args)) = Asserts that the called function will return true
+    self.assertFalse(function_name(args)) = Asserts that the called function will return false
+    self.assertEqual(function_name(args), __value__) = Asserts that the called function will return a specific value
+    with self.assertRaises(__error_type__): = Asserst that the called function will result in the named error
+        function_name(args)
+    def test_functionname_scenario(self) -> None = Definitions for a test that does not include mock
+    if __name__=="__main__": = Just put it in the testing file idk lol
+        unittest.main()
+
+Test function notation example:
+    def test_functionname_scenario(self) -> Name:
+    """Tests the function for the given scenario"""
+    self.assertTrue(function_name(args))
