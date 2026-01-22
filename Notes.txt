@@ -8,7 +8,7 @@ Terminal:
 
 Git:
     git add = adds named files to the staging area, ready to be committed
-        git add . = adds all files in current directory to staging area
+    git add . = adds all files in current directory to staging area
     git commit -m "message" = commits added files with given description
     git push = pushes all commited files to github, "saving" them online
     git status = reports current status of directory (changes, new files, etc)
